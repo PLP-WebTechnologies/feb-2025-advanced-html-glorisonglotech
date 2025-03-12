@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well-structured HTML5 Document</title>
+    <style>
+        body{
+            background: aliceblue;
+        }
+        section + section {
+            margin-top: 10%;
+        }
+        img {
+            width: 400px;
+            border-radius: 10px;
+        }
+        table {
+            width: 60%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            width: 400px;
+            border: 2px solid rgb(194, 192, 192);
+            padding: 30px 40px;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+        }
+        form div + div {
+            margin-top: 5%;
+        }
+        input, select {
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            border: 1px solid rgb(202, 199, 199);
+            border-radius: 8px;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            height: auto;
+        }
+        h2 {
+            color: #333;
+            font-family: Arial, sans-serif;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <section>
+        <h2>Ordered list with roman numerals</h2>
+        <ol type="i">
+            <li>Mango</li>
+            <li>Orange</li>
+            <li>Avocado</li>
+            <li>Grapes</li>
+            <li>Guava</li>
+        </ol>
+    </section>
+    <section>
+        <h2>External image from pexels.com</h2>
+        <img src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="external image from pexels.com">
+    </section>
+    <section>
+        <h2>Contacts table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>NAME</th>
+                    <th>ADDRESS</th>
+                    <th>MOBILE</th>
+                    <th>EMAILS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Glorison</td>
+                    <td>Elm Street, Nairobi, Kenya, 00100</td>
+                    <td>+2547346478432</td>
+                    <td>glorison@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Stivo</td>
+                    <td>Elm Street, Nairobi, Kenya, 00100</td>
+                    <td>+254628738833</td>
+                    <td>stivo@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Nigel</td>
+                    <td>Elm Street, Nairobi, Kenya, 00100</td>
+                    <td>+254694689946</td>
+                    <td>nigel@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Mike</td>
+                    <td>Elm Street, Nairobi, Kenya, 00100</td>
+                    <td>+2547454677873</td>
+                    <td>mike@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Rodney</td>
+                    <td>Elm Street, Nairobi, Kenya, 00100</td>
+                    <td>+25493679387</td>
+                    <td>rodney@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h2> Registration form</h2>
+        <form action="">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="password" required>
+            </div>
+            <div>
+                <label for="date">D.O.B</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label>Interests:</label>
+                <input type="checkbox" name="interests" value="coding"> Coding
+                <input type="checkbox" name="interests" value="music"> Music
+                <input type="checkbox" name="interests" value="sports"> Sports
+            </div>
+            <div>
+                <label>Subscription:</label>
+                <input type="radio" name="subscription" value="daily" required> Daily
+                <input type="radio" name="subscription" value="weekly"> Weekly
+                <input type="radio" name="subscription" value="monthly"> Monthly
+            </div>
+            <div>
+                <input type="submit" name="submit" id="submit">
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>Multimedia Elements</h2>
+        <audio controls>
+            <source src="multimedia/Nikita Kering’ - On Yah  Lyrics .mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <video controls width="400">
+            <source src="multimedia/audi.mp4" type="video/mp4" autoplay muted>
+            Your browser does not support the video element.
+        </video>
+    </section>
+</body>
+</html>
